@@ -1,0 +1,5 @@
+{% for server in groups.webserver %}
+{{ server }} {{ hostvars[server].ansible_default_ipv4.address }}
+{% endfor %}
+
+{% if primary_host == 'yes' %} primary {% endif %}

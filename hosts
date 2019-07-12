@@ -1,0 +1,14 @@
+[all:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
+ansible_become=yes
+
+#[webserver:vars]
+#primary_host=no
+
+[webserver]
+kafka0 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 primary_host=yes test_var=true ip_address=192.168.43.100
+kafka1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200 test_var=true ip_address=192.168.43.101
+
+[db]
+kafka2 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2201 test_var=false

@@ -1,0 +1,13 @@
+127.0.0.1   {{ ansible_hostname }}	{{ ansible_hostname }}
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+## WEBSERVERS
+{% for server in groups.webserver %}
+{{ server }} {{ hostvars[server].ansible_default_ipv4.address }}
+{% endfor %}
+
+#### DB
+{% for server in groups.db %}
+{{ server }} {{ hostvars[server].ansible_default_ipv4.address }}
+{% endfor %}

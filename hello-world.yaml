@@ -1,0 +1,31 @@
+---
+- name: hello world
+  hosts: web 
+  tasks:
+  - name: install the latest version of Apache
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+    - httpd
+    - php
+
+  - name: Configure Apache
+    template:
+      src: vhost.j2
+      dest: /etc/httpd/conf.d/vhost.conf
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: Start Apache
+    service:
+      name: httpd
+      state: restarted
+      enabled: yes
+
+#  - name: Roll-back
+#    copy:
+#      src: /etc/hosts
+#      dest: /home/vagrant/hosts
+#      remote_src: yes

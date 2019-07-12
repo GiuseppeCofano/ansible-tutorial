@@ -1,0 +1,4 @@
+- hosts: webserver
+  roles:
+    - role: apache-install
+      path_dest: /etc/httpd/conf.d/vhost_2
