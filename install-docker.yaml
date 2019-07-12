@@ -1,3 +1,4 @@
 - hosts: webserver
   roles:
     - geerlingguy.docker
+    - geerlingguy.nginx
