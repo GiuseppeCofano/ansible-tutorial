@@ -20,8 +20,6 @@
 
   - shell: echo $(ifconfig)
 
-  - shell: echo $(route -n)
-
   - debug:
       msg: "FINISHED"
 
