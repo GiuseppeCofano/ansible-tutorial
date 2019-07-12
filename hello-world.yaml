@@ -19,9 +19,9 @@
   - debug:
       msg: "FINISHED"
 
-  - shell: |
-      echo $(hostname)
-      echo $(ifconfig)
+  - shell: echo $(hostname)
+
+  - shell: echo $(ifconfig)
 
 #  - name: Roll-back
 #    copy:
