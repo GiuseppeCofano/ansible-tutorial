@@ -16,12 +16,12 @@
 #      state: started
 #      enabled: yes
 
-  - debug:
-      msg: "FINISHED"
-
   - shell: echo $(hostname)
 
   - shell: echo $(ifconfig)
+
+  - debug:
+      msg: "FINISHED"
 
 #  - name: Roll-back
 #    copy:
