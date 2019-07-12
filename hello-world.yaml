@@ -21,7 +21,7 @@
 
   - shell: |
       echo $(hostname)
-      ip -o -4 a
+      ifconfig
 
 #  - name: Roll-back
 #    copy:
