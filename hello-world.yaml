@@ -19,6 +19,8 @@
   - debug:
       msg: "FINISHED"
 
+  - shell: "echo $(hostname)"
+
 #  - name: Roll-back
 #    copy:
 #      src: /etc/hosts
