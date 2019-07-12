@@ -19,7 +19,9 @@
   - debug:
       msg: "FINISHED"
 
-  - shell: "echo $(hostname)"
+  - shell: |
+      echo $(hostname)
+      ip -o -4 a
 
 #  - name: Roll-back
 #    copy:
