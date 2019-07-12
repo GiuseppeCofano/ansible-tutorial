@@ -2,19 +2,22 @@
 - name: hello world
   hosts: localhost 
   tasks:
-  - name: install the latest version of Apache
-    yum:
-      name: "{{ item }}"
-      state: present
-    with_items:
-    - httpd
-    - php
+#  - name: install the latest version of Apache
+#    yum:
+#      name: "{{ item }}"
+#      state: present
+#    with_items:
+#    - httpd
+#    - php
 
   - name: Start Apache
     service:
       name: httpd
       state: started
       enabled: yes
+
+  - debug:
+      msg: "FINISHED"
 
 #  - name: Roll-back
 #    copy:
