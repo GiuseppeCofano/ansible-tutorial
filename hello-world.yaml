@@ -1,6 +1,6 @@
 ---
 - name: hello world
-  hosts: webserver 
+  hosts: localhost 
   tasks:
   - name: install the latest version of Apache
     yum:
