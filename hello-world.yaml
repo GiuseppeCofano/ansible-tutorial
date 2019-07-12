@@ -9,12 +9,12 @@
 #    with_items:
 #    - httpd
 #    - php
-
-  - name: Start Apache
-    service:
-      name: httpd
-      state: started
-      enabled: yes
+#
+# - name: Start Apache
+#    service:
+#      name: httpd
+#      state: started
+#      enabled: yes
 
   - debug:
       msg: "FINISHED"
